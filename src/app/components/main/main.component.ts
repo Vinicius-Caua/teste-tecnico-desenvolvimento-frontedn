@@ -16,6 +16,7 @@ import { CustomValidators } from './validators/cpf.validation';
 import { emailValidator } from './validators/email.validation';
 import { dateNotInFutureValidator } from './validators/date.validation';
 import { differenceInYears, parseISO, isBefore, subYears } from 'date-fns';
+import { requiredDateValidator } from './validators/dateEmpty.validation';
 
 @Component({
   selector: 'app-main',
@@ -53,7 +54,7 @@ export class MainComponent implements OnInit {
       name: ['', Validators.required, nameValidator()],
       email: ['', [Validators.required, emailValidator()]],
       cpf: ['', Validators.required, CustomValidators.cpfValidator],
-      date: ['', [Validators.required, dateNotInFutureValidator()]],
+      date: ['', [Validators.required, requiredDateValidator, dateNotInFutureValidator()]],
       cep: ['', Validators.required],
     });
   }
