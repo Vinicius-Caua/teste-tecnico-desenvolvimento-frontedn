@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { NgxMaskDirective, NgxMaskPipe } from 'ngx-mask';
 import { MainComponent } from "./components/main/main.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { HeaderComponent } from "./components/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgxMaskDirective, NgxMaskPipe, MainComponent, MainComponent, FooterComponent],
+  imports: [RouterOutlet, NgxMaskDirective, NgxMaskPipe, MainComponent, MainComponent, FooterComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
