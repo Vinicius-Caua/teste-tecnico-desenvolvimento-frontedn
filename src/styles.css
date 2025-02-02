@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-blue-botao: #FF8A00;
+  --color-blue-background-form: #668BB1;
+  --color-blue-label: #557EA9;
+  --color-dark-blue-background: rgb(2, 3, 129);
+}
+
