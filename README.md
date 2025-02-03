@@ -1,6 +1,6 @@
 # SistemaCadastro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Projeto Gerado por Angular [Angular CLI](https://github.com/angular/angular-cli) versão 17.3.11.
 
 ## Development server
 
