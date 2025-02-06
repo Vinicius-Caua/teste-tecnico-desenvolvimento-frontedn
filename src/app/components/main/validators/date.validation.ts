@@ -1,5 +1,5 @@
 import { ValidatorFn, AbstractControl, ValidationErrors } from "@angular/forms";
-import { parseISO, isAfter } from "date-fns";
+import { parseISO, isAfter, isToday } from "date-fns";
 
 export function dateNotInFutureValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -12,6 +12,10 @@ export function dateNotInFutureValidator(): ValidatorFn {
     // Verifica se a data de nascimento é válida
     if (isAfter(birthDate, nowDate)) {
       return { futureDate: true };
+    }
+
+    if (isToday(birthDate)) {
+      return { todayDate: true };
     }
     return null;
   };
